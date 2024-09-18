@@ -7,14 +7,12 @@ abstract class Animal {
       System.out.println("This animal is sleeping.");
   }
 }
-
 class Dog extends Animal {
   // Providing implementation for the abstract method
   public void sound() {
       System.out.println("The dog barks.");
   }
 }
-
 public class abstraction{
   public static void main(String[] args) {
       Dog dog = new Dog();
