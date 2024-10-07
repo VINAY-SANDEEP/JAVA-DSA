@@ -1,6 +1,6 @@
 # Java Learning Roadmap 🚀
 
-![Java Learning Roadmap](https://media.geeksforgeeks.org/wp-content/uploads/20230823152056/What-is-Advance-JAVA.pn)
+![Java Learning Roadmap](https://media.geeksforgeeks.org/wp-content/uploads/20230823152056/What-is-Advance-JAVA.png)
 
 [![Java](https://img.shields.io/badge/Java-Beginner%20to%20Advanced-red)](https://www.oracle.com/java/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
