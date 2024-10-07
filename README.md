@@ -1,10 +1,10 @@
 # Java Learning Roadmap 🚀
 
-![Java Learning Roadmap](https://media.geeksforgeeks.org/wp-content/uploads/20230823152056/What-is-Advance-JAVA.png)
+![Java Learning Roadmap](https://media.geeksforgeeks.org/wp-content/uploads/20230823152056/What-is-Advance-JAVA.pn)
 
 [![Java](https://img.shields.io/badge/Java-Beginner%20to%20Advanced-red)](https://www.oracle.com/java/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Follow on LinkedIn](https://img.shields.io/badge/Follow%20Me-LinkedIn-blue)](https://linkedin.com) 
+[![Follow on LinkedIn](https://img.shields.io/badge/Follow%20Me-LinkedIn-blue)](https://www.linkedin.com/in/vinay-sandeep-dwarampudi-ab87ab291/) 
 
 ---
 
@@ -96,8 +96,8 @@ This is the Java learning roadmap 📚, and Data Structures and Algorithms (DSA)
 ---
 
 ## 📫 Contact & Connect
-[![LinkedIn](https://img.shields.io/badge/Connect%20with%20me-LinkedIn-blue)](https://linkedin.com)  
-[![Email](https://img.shields.io/badge/Email-Vinay%20Sandeep%20Dwarampudi-green)](mailto:example@example.com)
+[![LinkedIn](https://img.shields.io/badge/Connect%20with%20me-LinkedIn-blue)](https://www.linkedin.com/in/vinay-sandeep-dwarampudi-ab87ab291/)  
+[![Email](https://img.shields.io/badge/Email-Vinay%20Sandeep%20Dwarampudi-green)](mailto:vinaysandeep782@gmail.com)
 
 Feel free to reach out if you have any questions, suggestions, or feedback! 😊
 
