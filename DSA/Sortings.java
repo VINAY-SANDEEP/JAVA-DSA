@@ -181,6 +181,7 @@ public class Sortings {
             if (!swapped) {
                 break;
             }
+            System.out.println();
         }
         return arr;
     }

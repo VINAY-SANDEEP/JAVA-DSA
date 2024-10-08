@@ -1,12 +1,13 @@
 package DSA.LinkedList;
+
 class LL{
     private Node head;
   private Node tail;
   private int size;
-
   public LL(){
     this.size = 0;
    }
+   //inserting an element
 public void insertFirst(int val){
   Node node = new Node(val);
   node.next = head;
