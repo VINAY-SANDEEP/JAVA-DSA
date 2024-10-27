@@ -1,5 +1,4 @@
 package DSA.LinkedList;
-
 class LL{
     private Node head;
   private Node tail;
@@ -103,7 +102,6 @@ public void display(){
  private class Node{
       private int value;
       private Node next;
-
       public Node(int value) {
         this.value = value;
       }

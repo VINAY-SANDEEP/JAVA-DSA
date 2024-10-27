@@ -1,19 +1,18 @@
-package DSA.LinkedList;
-
-public class ll {
+ package DSA.LinkedList;
+public class yuva {
     class Node {
-        int value;
+        int data;
         Node next;
-        public Node(int value) {
-            this.value = value;
+        public Node(int data) {
+            this.data = data;
             this.next = null;
         }
     }
     private Node head = null;
     private Node tail = null;
     private int size = 0;
-    public void insertFirst(int value) {
-        Node temp = new Node(value);
+    public void insertFirst(int data) {
+        Node temp = new Node(data);
         if (head == null) {
             head = tail = temp;
         } else {
@@ -22,8 +21,8 @@ public class ll {
         }
         size++;
     }
-    public void insertLast(int value) {
-        Node temp = new Node(value);
+    public void insertLast(int data) {
+        Node temp = new Node(data);
         if (head == null) {
             head = tail = temp;
         } else {
@@ -35,7 +34,7 @@ public class ll {
     public void display() {
         Node temp = head;
         while (temp != null) {
-            System.out.print(temp.value + "  ->  ");
+            System.out.print(temp.data + "  ->  ");
             temp = temp.next;
         }
         System.out.println("end");
@@ -54,22 +53,23 @@ public class ll {
     }
     public void deleteLast() {
         if (head == null) {
-            System.out.println("List is empty, nothing to delete.");
+            System.out.println("Nothing to delete");
             return;
         }
         if (size == 1) {
             head = tail = null;
-            size--;
-            return;
+        } 
+        else {
+            Node current = head;
+            while (current.next != tail) {
+                current = current.next;
+            }
+            current.next = null;
+            tail = current;
         }
-        Node temp = head;
-        while (temp.next != tail) {
-            temp = temp.next;
-        }
-        temp.next = null;
-        tail = temp;
         size--;
     }
+    
     public void insertAt(int position, int data) {
         if (position < 0 || position > size) {
             System.out.println("Invalid position.");
@@ -83,15 +83,16 @@ public class ll {
             insertLast(data);
             return;
         }
-        Node link = new Node(data);
+        Node temp = new Node(data);
         Node current = head;
         for (int i = 0; i < position - 1; i++) {
             current = current.next;
         }
-        link.next = current.next;
-        current.next = link;
+        temp.next = current.next;
+        current.next = temp; 
         size++;
     }
+    
     public void delAt(int position) {
         if (position > size) {
             throw new IndexOutOfBoundsException();
@@ -120,14 +121,13 @@ public class ll {
             return;
         }
         helper(head.next);
-        System.out.print(head.value + " -> ");
+        System.out.print(head.data + " -> ");
     }
     // Corrected reverse linked list
     public void reverseLL() {
         reverseRecursively(head);
     }
     private void reverseRecursively(Node current) {
-        // Base case: If list is empty or only one node
         if (current == null || current.next == null) {
             head = current;
             return;
@@ -155,7 +155,7 @@ public class ll {
     head = prev;
  }
     public static void main(String[] args) {
-        ll x = new ll();
+        yuva x = new yuva();
         x.insertFirst(1);
         x.insertFirst(2);
         x.insertFirst(3);
