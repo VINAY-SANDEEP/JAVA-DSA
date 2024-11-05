@@ -3,9 +3,7 @@ abstract class Animal {
   // Abstract method (does not have a body)
   public abstract void sound();
   // Regular method
-  public void sleep() {
-      System.out.println("This animal is sleeping.");
-  }
+  public abstract void sleep();
 }
 class Dog extends Animal {
   // Providing implementation for the abstract method
