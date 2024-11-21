@@ -5,7 +5,7 @@ public class Sortings {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("bittu nuvvu super ra");
-        System.out.println("***************************Hello Everyone Welcome To This*****************************************");
+        System.out.println("***************************Hello Everyoe Welcome To This*****************************************");
         System.out.println("Enter which algorthium do you want");
         System.out.println("1.linear Search--------{to search an element easy way}");
         System.out.println("2.Binary search------- {to search mid value in array}");
