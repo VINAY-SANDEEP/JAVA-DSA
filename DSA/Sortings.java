@@ -174,7 +174,6 @@ public class Sortings {
                     int temp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;
-                    swapped = true;
                 }
             } 
             System.out.println();
@@ -192,14 +191,13 @@ public class Sortings {
         for (int i = 0; i < arr.length; i++) {
             arr[i] = scanner.nextInt();
         }
-        int k = scanner.nextInt();
-        int[] x = selection_sort_function(arr,k);
+        int[] x = selection_sort_function(arr);
         System.out.println(Arrays.toString(x));
     }
-    static int[] selection_sort_function(int[] arr,int k){
-    for (int i = 0; i < k; i++) {
+    static int[] selection_sort_function(int[] arr){
+    for (int i = 0; i < arr.length; i++) {
       int min = i;
-      for (int j = i + 1; j < k; j++) {
+      for (int j = i + 1; j < arr.length; j++) {
         if (arr[j] < arr[min]) {
           min = j;
           }
