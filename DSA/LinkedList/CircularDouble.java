@@ -1,5 +1,6 @@
 package DSA.LinkedList;
-public class Double {
+
+public class CircularDouble {
     class Node {
         int data;
         Node next;
@@ -11,6 +12,7 @@ public class Double {
             this.prev = null;
         }
     }
+
     private Node head = null;
     private Node tail = null;
     private int size = 0;
@@ -19,9 +21,13 @@ public class Double {
         Node temp = new Node(data);
         if (head == null) {
             head = tail = temp;
+            head.next = head; 
+            head.prev = head; 
         } else {
             temp.next = head;
+            temp.prev = tail;
             head.prev = temp;
+            tail.next = temp;
             head = temp;
         }
         size++;
@@ -31,9 +37,13 @@ public class Double {
         Node temp = new Node(data);
         if (head == null) {
             head = tail = temp;
+            head.next = head; // Point to itself
+            head.prev = head; // Point to itself
         } else {
             tail.next = temp;
             temp.prev = tail;
+            temp.next = head;
+            head.prev = temp;
             tail = temp;
         }
         size++;
@@ -48,7 +58,8 @@ public class Double {
             head = tail = null;
         } else {
             head = head.next;
-            head.prev = null;
+            head.prev = tail;
+            tail.next = head;
         }
         size--;
     }
@@ -62,7 +73,8 @@ public class Double {
             head = tail = null;
         } else {
             tail = tail.prev;
-            tail.next = null;
+            tail.next = head;
+            head.prev = tail;
         }
         size--;
     }
@@ -117,11 +129,15 @@ public class Double {
     }
 
     public void display() {
+        if (head == null) {
+            System.out.println("Empty list");
+            return;
+        }
         Node temp = head;
-        while (temp != null) {
+        do {
             System.out.print(temp.data + " <-> ");
             temp = temp.next;
-        }
+        } while (temp != head);  
         System.out.println("END");
     }
 
@@ -138,18 +154,18 @@ public class Double {
 
     public void find(int value) {
         Node node = head;
-        while (node != null) {
+        do {
             if (node.data == value) {
                 System.out.println("Node with value " + value + " found.");
                 return;
             }
             node = node.next;
-        }
+        } while (node != head);  // Loop until we come back to the head
         System.out.println("Node with value " + value + " not found.");
     }
 
     public static void main(String[] args) {
-        Double x = new Double();
+        CircularDouble x = new CircularDouble();
         x.insertFirst(10);
         x.insertFirst(20);
         x.insertFirst(30);

@@ -8,11 +8,9 @@ public class Single {
                 this.next = null;
             }
         }
-        
         private Node head = null;
         private Node tail = null;
         private int size = 0;
-    
         public void insertFirst(int data) {
             Node temp = new Node(data);
             if (head == null) {
@@ -26,7 +24,7 @@ public class Single {
        public void insertLast(int data){
            Node temp = new Node(data);
            if(head==null){
-               head = tail = temp;
+               head = tail = temp; 
            }
            else{
                tail.next = temp;
@@ -152,4 +150,3 @@ public class Single {
             x.display();
         }
     }
-    
