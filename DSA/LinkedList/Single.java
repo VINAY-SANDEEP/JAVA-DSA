@@ -135,7 +135,20 @@ public class Single {
             }
             System.out.println("Node with value " + value + " not found.");
         }
-        
+        public int modularNode(Node head, int k) {
+         if (head == null || k <= 0) return -1;
+        Node current = head;
+        int index = 1;
+        int modularNodeValue = -1;
+        while (current != null) {
+            if (index % k == 0) {
+                modularNodeValue = current.data;
+            }
+            current = current.next;
+            index++;
+        }
+        return modularNodeValue;
+    }
         public static void main(String[] args) {
            Single x = new Single();
             x.insertFirst(10);
