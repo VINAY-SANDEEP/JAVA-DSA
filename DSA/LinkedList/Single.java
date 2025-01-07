@@ -149,6 +149,17 @@ public class Single {
         }
         return modularNodeValue;
     }
+        //change array into linkedlist
+         static Node constructLL(int arr[]) {
+         Node node = new Node(arr[arr.length-1]);
+         
+        for(int i =arr.length-2;i>=0;i--){
+            Node temp = new Node(arr[i]);
+            temp.next = node;
+            node = temp;        
+        }
+        return node;
+    }
         public static void main(String[] args) {
            Single x = new Single();
             x.insertFirst(10);
