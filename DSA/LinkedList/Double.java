@@ -66,7 +66,6 @@ public class Double {
         }
         size--;
     }
-
     public void insertAt(int position, int data) {
         if (position < 0 || position > size) {
             System.out.println("Invalid position");

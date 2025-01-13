@@ -113,7 +113,6 @@ public class Single {
             current.next = current.next.next;
             size--;
         }
-        
         public int get(int index) {
             if (index < 0 || index >= size) {
                 throw new IndexOutOfBoundsException("Index out of bounds");
@@ -150,7 +149,7 @@ public class Single {
         return modularNodeValue;
     }
         //change array into linkedlist
-         static Node constructLL(int arr[]) {
+         public Node constructLL(int arr[]) {
          Node node = new Node(arr[arr.length-1]);
          
         for(int i =arr.length-2;i>=0;i--){
