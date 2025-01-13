@@ -147,7 +147,21 @@ public class Double {
         }
         System.out.println("Node with value " + value + " not found.");
     }
-
+   Node reverseList(Node head) {
+        // code here
+         Node temp = head;
+        Node prev = null;
+        Node next = null;
+        
+        while(temp != null){
+            
+            next = temp.next;
+            temp.next = prev;
+            
+            prev = temp;
+            temp = next;
+        }
+        return prev;
     public static void main(String[] args) {
         Double x = new Double();
         x.insertFirst(10);
