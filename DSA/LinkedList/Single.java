@@ -182,6 +182,19 @@ public class Single {
         return dummy.next;
         
     }
+         public static void removeLoop(Node head) {
+    
+        HashSet<Node> set = new HashSet<>();
+        Node temp = head;
+
+        while (temp != null) {
+            if (set.contains(temp.next)) {
+                temp.next = null; 
+                break;
+            }
+            set.add(temp);
+            temp = temp.next;
+        }
         public static void main(String[] args) {
            Single x = new Single();
             x.insertFirst(10);
