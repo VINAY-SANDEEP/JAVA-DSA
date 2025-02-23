@@ -3,6 +3,8 @@ package TREES;
 import java.util.LinkedList;
 import java.util.Queue;
 
+import OOPS.statics;
+
 public class Binarytree {
     class Node {
         int data;
@@ -104,6 +106,16 @@ public class Binarytree {
         int right = sum(root.right);
         return left+right+root.data;
     }
+    public static void nthlevel(Node root,int n){
+        if (root == null) {
+            return;
+        }
+        if (n == 1) {
+            System.out.print(root.data + " ");
+        }
+        nthlevel(root.left, n-1);
+        nthlevel(root.right, n-1);
+    }
     public static void main(String[] args) {
         int[] nodes = {1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1};
         Binarytree bt = new Binarytree();
@@ -122,6 +134,10 @@ public class Binarytree {
         System.out.println(height(root));
         System.out.println(diameter(root));
         System.out.println(sum(root));
-        
+        nthlevel(root, 1);
+        System.out.println();
+        nthlevel(root, 2);
+        System.out.println();
+        nthlevel(root, 3);
     }
 }
