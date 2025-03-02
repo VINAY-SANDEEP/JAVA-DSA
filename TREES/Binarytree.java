@@ -116,6 +116,46 @@ public class Binarytree {
         nthlevel(root.left, n-1);
         nthlevel(root.right, n-1);
     }
+     public static Node insert(Node root, int key) {
+        if (root == null) {
+            return new Node(key);
+        }
+        if (key < root.data) {
+            root.left = insert(root.left, key);
+        } else if (key > root.data) {
+            root.right = insert(root.right, key);
+        }
+        return root;
+    }
+     public static  boolean search(Node root, int key) {
+        if (root == null) return false;
+        if (root.data == key) return true;
+        return key < root.data ? search(root.left, key) : search(root.right, key);
+    }
+    public  static Node delete(Node root, int key) {
+        if (root == null) return root;
+        if (key < root.data) {
+            root.left = delete(root.left, key);
+        } else if (key > root.data) {
+            root.right = delete(root.right, key);
+        } else {
+           
+            if (root.left == null) return root.right;
+            else if (root.right == null) return root.left;
+            root.data = minValue(root.right);
+            root.right = delete(root.right, root.data);
+        }
+        return root;
+    }
+    
+     private static int minValue(Node root) {
+        int minv = root.data;
+        while (root.left != null) {
+            minv = root.left.data;
+            root = root.left;
+        }
+        return minv;
+    }
     public static void main(String[] args) {
         int[] nodes = {1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1};
         Binarytree bt = new Binarytree();
