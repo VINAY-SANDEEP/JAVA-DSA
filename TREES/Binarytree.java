@@ -116,14 +116,14 @@ public class Binarytree {
         nthlevel(root.left, n-1);
         nthlevel(root.right, n-1);
     }
-     public static Node insert(Node root, int key) {
+     public static Node insert(Node root, int key, Binarytree bt) {
         if (root == null) {
-            return new Node(key);
+            return bt.new Node(key);
         }
         if (key < root.data) {
-            root.left = insert(root.left, key);
+        root.left = insert(root.left, key, bt);
         } else if (key > root.data) {
-            root.right = insert(root.right, key);
+            root.right = insert(root.right, key, bt);
         }
         return root;
     }
@@ -160,6 +160,7 @@ public class Binarytree {
         int[] nodes = {1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1};
         Binarytree bt = new Binarytree();
         Node root = TreeBuilder.buildTree(nodes, bt);
+        bt.insert(root, 7, bt);
 
         System.out.println("Binary Tree Created Successfully!");
         preorder(root);
