@@ -5,7 +5,7 @@ public class Sortings {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("bittu nuvvu super ra");
-        System.out.println("***************************Hello Everyone Welcome To This*****************************************");
+        System.out.println("***************************Hello Everyoe Welcome To This*****************************************");
         System.out.println("Enter which algorthium do you want");
         System.out.println("1.linear Search--------{to search an element easy way}");
         System.out.println("2.Binary search------- {to search mid value in array}");
@@ -167,20 +167,16 @@ public class Sortings {
         System.out.println(Arrays.toString(x));
     }
     static int[] bubble_sort(int[] arr) {
-        boolean swapped;
+        
         for (int i = 0; i < arr.length; i++) {
-            swapped = false;
             for (int j = 0; j < arr.length - i - 1; j++) {
                 if (arr[j] > arr[j + 1]) {
                     int temp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;
-                    swapped = true;
                 }
-            }
-            if (!swapped) {
-                break;
-            }
+            } 
+            System.out.println();
         }
         return arr;
     }
@@ -195,14 +191,13 @@ public class Sortings {
         for (int i = 0; i < arr.length; i++) {
             arr[i] = scanner.nextInt();
         }
-        int k = scanner.nextInt();
-        int[] x = selection_sort_function(arr,k);
+        int[] x = selection_sort_function(arr);
         System.out.println(Arrays.toString(x));
     }
-    static int[] selection_sort_function(int[] arr,int k){
-    for (int i = 0; i < k; i++) {
+    static int[] selection_sort_function(int[] arr){
+    for (int i = 0; i < arr.length; i++) {
       int min = i;
-      for (int j = i + 1; j < k; j++) {
+      for (int j = i + 1; j < arr.length; j++) {
         if (arr[j] < arr[min]) {
           min = j;
           }
