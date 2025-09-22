@@ -1,37 +1,42 @@
-package OOPS;
-public class encapsulation {
- private   int roll;
-private String name;
-private boolean isattend;
-    //constructor
-    encapsulation(int roll){
-     this.roll=roll;
+class Student {
+    // private data (hidden from outside)
+    private String name;
+    private int age;
+
+    // Getter method
+    public String getName() {
+        return name;
     }
-    void studentattend(boolean flag){
-        if (!isattend) {
-            isattend=flag;
-        }
-        System.out.println("teacher assigned attendence");
-    }
-     boolean studentassign(){
-    System.out.println("student assigned attendence");
-     return isattend;
-    }
-    public void setRoll(int roll) {
-        this.roll = roll;
-    }
+
+    // Setter method
     public void setName(String name) {
         this.name = name;
     }
-    public void setIsattend(boolean isattend) {
-        this.isattend = isattend;
+
+    // Getter method
+    public int getAge() {
+        return age;
     }
+
+    // Setter method with validation
+    public void setAge(int age) {
+        if (age > 0) {
+            this.age = age;
+        } else {
+            System.out.println("Age must be positive!");
+        }
+    }
+}
+
+public class Main {
     public static void main(String[] args) {
-        encapsulation obj=new encapsulation(21);
-        System.out.println(obj.name);
-        System.out.println(obj.roll);
-        System.out.println(obj.isattend=true);
-        obj.studentattend(true);
-       obj.studentassign();
+        Student s = new Student();
+
+        // setting values using setters
+        s.setName("Vinay");
+        s.setAge(20);
+
+        // getting values using getters
+        System.out.println(s.getName() + " is " + s.getAge() + " years old");
     }
 }
